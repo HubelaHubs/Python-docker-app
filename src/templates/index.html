@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Country Table</title>
+    <style>
+        body { background-color: #f0f8ff; } /* Light blue background */
+        table { border-collapse: collapse; width: 50%; }
+        th, td { border: 1px solid #333; padding: 8px; text-align: left; }
+        th { background: #eee; }
+    </style>
+</head>
+<body>
+    <h1>Country Table</h1>
+    <table>
+        <tr>
+            <th>Country</th>
+            <th>Continent</th>
+            <th>Population</th>
+        </tr>
+        {% for row in data %}
+        <tr>
+            <td>{{ row.country }}</td>
+            <td>{{ row.continent }}</td>
+            <td>{{ row.population }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
