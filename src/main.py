@@ -8,6 +8,7 @@ def home():
         {"country": "South Africa", "continent": "Africa", "population": "60,000,000"},
         {"country": "Germany", "continent": "Europe", "population": "83,000,000"},
         {"country": "Brazil", "continent": "South America", "population": "213,000,000"},
+        {"country": "Congo", "continent": "Africa", "population": "100,000,000"},
     ]
     return render_template("index.html", data=data)
 
