@@ -48,4 +48,4 @@ COPY . .
 EXPOSE 8000
 
 # Run the application.
-CMD ["python3", "src/main.py"]
+CMD ["Python", "src/main.py"]
