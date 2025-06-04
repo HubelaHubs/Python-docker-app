@@ -8,12 +8,11 @@ def home():
         {"country": "South Africa", "continent": "Africa", "population": "60,000,000"},
         {"country": "Germany", "continent": "Europe", "population": "83,000,000"},
         {"country": "Brazil", "continent": "South America", "population": "213,000,000"},
-<<<<<<< HEAD
-         {"country": "Congo", "continent": "Africa", "population": "100,000,000"},
-=======
         {"country": "Congo", "continent": "Africa", "population": "100,000,000"},
->>>>>>> e66b315a41b2e62a42da324cd03f4aeb108e1b2a
-    ]
+        {"country": "India", "continent": "Asia", "population": "1,400,000,000"},
+        {"country": "China", "continent": "Asia", "population": "1,400,000,000"},
+        {"country": "United States", "continent": "North America", "population": "331,000,000"},
+        {"country": "Canada", "continent": "North America", "population": "38,000,000"},]
     return render_template("index.html", data=data)
 
 if __name__ == "__main__":
