@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Country Table</title>
+    <title>Sanlam Group</title>
     <style>
         body {
             background-color: #f0f8ff;
@@ -38,18 +38,18 @@
     </style>
 </head>
 <body>
-    <h1>Country Table</h1>
+    <h1>Sanlam Group</h1>
     <table>
         <tr>
-            <th>Country</th>
-            <th>Continent</th>
-            <th>Population</th>
+            <th>Cluster</th>
+            <th>Business Unit</th>
+            <th>Department</th>
         </tr>
         {% for row in data %}
         <tr>
-            <td>{{ row.country }}</td>
-            <td>{{ row.continent }}</td>
-            <td>{{ row.population }}</td>
+            <td>{{ row.cluster }}</td>
+            <td>{{ row.business unit }}</td>
+            <td>{{ row.department }}</td>
         </tr>
         {% endfor %}
     </table>
