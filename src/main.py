@@ -10,7 +10,7 @@ def home():
         {"cluster": "Sanlam Investment", "businessunit": "Asset Management", "department": "Satrix"},
         {"cluster": "Santam", "businessunit": "Santam Client Solutions", "department": "Client Service Operations"},
         {"cluster": "Sanlam Fintech", "businessunit": "Sanlam Rewards", "department": "Sanlam Reality Programme"},
-        {"cluster": "Sanlam Corporate", "businessunit": "Employee Benefits", "department": "Pension Fund Administration"}
+        {"cluster": "Sanlam Corporate", "businessunit": "Employee Benefits", "department": "Pension Fund Administration"},
         {"cluster": "Sanlam Personal Finance (SPF)", "businessunit": "Wealth Management", "department": "Financial Planning"},
         {"cluster": "Sanlam Group", "businessunit": "Group Finance", "department": "Financial Reporting"},
         {"cluster": "Sanlam Group", "businessunit": "Group Risk", "department": "Risk Management"},
