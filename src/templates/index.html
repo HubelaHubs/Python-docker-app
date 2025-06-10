@@ -84,6 +84,11 @@
         <img src="{{ url_for('static', filename='sanlam-logo.png') }}" alt="Sanlam Logo">
     </div>
     <div class="card">
+        <div style="text-align: right; margin-bottom: 16px;">
+            <a href="{{ url_for('logout') }}" style="background: #0077c8; color: #fff; padding: 8px 18px; border-radius: 6px; text-decoration: none; font-weight: 600; transition: background 0.2s;" onmouseover="this.style.background='#00bfae'" onmouseout="this.style.background='#0077c8'">
+                Logout
+            </a>
+        </div>
         <h1>Sanlam Group Table</h1>
         <table>
             <tr>
