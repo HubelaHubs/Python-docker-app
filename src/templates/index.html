@@ -4,53 +4,78 @@
     <title>Sanlam Group Table</title>
     <style>
         body {
-            background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
-            font-family: 'Segoe UI', Arial, sans-serif;
+            min-height: 100vh;
             margin: 0;
-            padding: 40px;
+            padding: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(120deg, #e0f7fa 0%, #b2ebf2 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
         }
         .logo-container {
             text-align: center;
-            margin-bottom: 24px;
+            margin-top: 40px;
+            margin-bottom: 16px;
         }
         .logo-container img {
-            width: 180px;
+            width: 160px;
             height: auto;
+            filter: drop-shadow(0 2px 8px rgba(0,119,200,0.10));
+        }
+        .card {
+            background: #ffffffcc;
+            border-radius: 18px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+            padding: 32px 32px 24px 32px;
+            margin-top: 16px;
+            margin-bottom: 40px;
+            width: 90%;
+            max-width: 900px;
         }
         h1 {
             color: #0077c8;
             text-align: center;
             margin-bottom: 32px;
             letter-spacing: 2px;
+            font-weight: 700;
+            font-size: 2.2em;
+            text-shadow: 0 2px 8px #b2ebf2;
         }
         table {
-            border-collapse: collapse;
-            width: 80%;
-            margin: 0 auto;
+            border-collapse: separate;
+            border-spacing: 0;
+            width: 100%;
             background: #fff;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
             border-radius: 12px;
             overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,119,200,0.07);
         }
         th, td {
-            border: none;
             padding: 16px 20px;
             text-align: left;
         }
         th {
-            background: #0077c8;
+            background: linear-gradient(90deg, #0077c8 60%, #00bfae 100%);
             color: #fff;
             font-size: 1.1em;
+            border: none;
         }
-        tr:nth-child(even) {
+        tr:nth-child(even) td {
             background: #e3f2fd;
         }
-        tr:nth-child(odd) {
+        tr:nth-child(odd) td {
             background: #f9f9f9;
         }
-        tr:hover {
+        tr:hover td {
             background: #b2ebf2;
             transition: background 0.3s;
+        }
+        @media (max-width: 700px) {
+            .card { padding: 12px 2vw; }
+            table, th, td { font-size: 0.95em; }
+            .logo-container img { width: 120px; }
         }
     </style>
 </head>
@@ -58,20 +83,22 @@
     <div class="logo-container">
         <img src="{{ url_for('static', filename='sanlam-logo.png') }}" alt="Sanlam Logo">
     </div>
-    <h1>Sanlam Group Table</h1>
-    <table>
-        <tr>
-            <th>Cluster</th>
-            <th>Business Unit</th>
-            <th>Department</th>
-        </tr>
-        {% for row in data %}
-        <tr>
-            <td>{{ row.cluster }}</td>
-            <td>{{ row.businessunit }}</td>
-            <td>{{ row.department }}</td>
-        </tr>
-        {% endfor %}
-    </table>
+    <div class="card">
+        <h1>Sanlam Group Table</h1>
+        <table>
+            <tr>
+                <th>Cluster</th>
+                <th>Business Unit</th>
+                <th>Department</th>
+            </tr>
+            {% for row in data %}
+            <tr>
+                <td>{{ row.cluster }}</td>
+                <td>{{ row.businessunit }}</td>
+                <td>{{ row.department }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
 </body>
 </html>
