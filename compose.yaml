@@ -2,6 +2,8 @@
 # If you need more help, visit the Docker Compose reference guide at
 # https://docs.docker.com/go/compose-spec-reference/
 
+$schema: "https://raw.githubusercontent.com/compose-spec/compose-go/master/schema/compose-spec.json"
+
 # Here the instructions define your application as a service called "server".
 # This service is built from the Dockerfile in the current directory.
 # You can add other services your application may depend on here, such as a
@@ -13,7 +15,6 @@ services:
       context: .
     ports:
       - 8000:8000
-#    command: ["python", "src/main.py"]  # Only if you want to override  
 
 # The commented out section below is an example of how to define a PostgreSQL
 # database that your application can use. `depends_on` tells Docker Compose to
@@ -37,8 +38,8 @@ services:
 #       - POSTGRES_PASSWORD_FILE=/run/secrets/db-password
 #     expose:
 #       - 5432
-#      healthcheck:
-#      test: [ "CMD", "pg_isready" ]
+#     healthcheck:
+#       test: [ "CMD", "pg_isready" ]
 #       interval: 10s
 #       timeout: 5s
 #       retries: 5
@@ -47,3 +48,4 @@ services:
 # secrets:
 #   db-password:
 #     file: db/password.txt
+
