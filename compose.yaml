@@ -2,7 +2,7 @@
 # If you need more help, visit the Docker Compose reference guide at
 # https://docs.docker.com/go/compose-spec-reference/
 
-$schema: "https://raw.githubusercontent.com/compose-spec/compose-go/master/schema/compose-spec.json"
+#$schema: "https://raw.githubusercontent.com/compose-spec/compose-go/master/schema/compose-spec.json"
 
 # Here the instructions define your application as a service called "server".
 # This service is built from the Dockerfile in the current directory.
