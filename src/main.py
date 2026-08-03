@@ -32,7 +32,7 @@ def home():
         {"cluster": "Sanlam Group", "businessunit": "Group Finance", "department": "Financial Reporting", "province": "NW"},
         {"cluster": "Sanlam Group", "businessunit": "Group Risk", "department": "Risk Management", "province": "Eastern Cape"},
         {"cluster": "Sanlam Group", "businessunit": "Group Technology", "department": "IT Infrastructure", "province": "KZN"},
-        {"cluster": "Sanlam Group", "businessunit": "Group Marketing", "department": "Brand Management", "province": "FS},
+        {"cluster": "Sanlam Group", "businessunit": "Group Marketing", "department": "Brand Management", "province": "FS"},
         {"cluster": "Sanlam Group", "businessunit": "Group Human Resources", "department": "Talent Management", "province": "Western Cape"},
         {"cluster": "Sanlam Group", "businessunit": "Group Legal", "department": "Compliance and Governance", "province": "Eastern Cape"},
         {"cluster": "Sanlam Group", "businessunit": "Group Strategy", "department": "Corporate Strategy", "province": "Eastern Cape"},
