@@ -22,7 +22,7 @@ def home():
     if not session.get("logged_in"):
         return redirect(url_for("login"))
     data = [
-        {"cluster": "Sanlam Life Savings (SLS)", "businessunit": "Sanlam Retail Mass", "department": "Assupol", "province": "Eastern Cape},
+        {"cluster": "Sanlam Life Savings (SLS)", "businessunit": "Sanlam Retail Mass", "department": "Assupol", "province": "Eastern Cape"},
         {"cluster": "Sanlam Emerging Markets (SEM)", "businessunit": "Sanlam Pan-Africa (SPA)", "department": "Life Insurance"},
         {"cluster": "Sanlam Investment", "businessunit": "Asset Management", "department": "Satrix", "province": "KZN"},
         {"cluster": "Santam", "businessunit": "Santam Client Solutions", "department": "Client Service Operations", "province": "KZN"},
