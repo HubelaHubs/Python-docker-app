@@ -23,7 +23,7 @@ def home():
         return redirect(url_for("login"))
     data = [
         {"cluster": "Sanlam Life Savings (SLS)", "businessunit": "Sanlam Retail Mass", "department": "Assupol", "province": "Eastern Cape"},
-        {"cluster": "Sanlam Emerging Markets (SEM)", "businessunit": "Sanlam Pan-Africa (SPA)", "department": "Life Insurance"},
+        {"cluster": "Sanlam Emerging Markets (SEM)", "businessunit": "Sanlam Pan-Africa (SPA)", "department": "Life Insurance", "province": "FS"},
         {"cluster": "Sanlam Investment", "businessunit": "Asset Management", "department": "Satrix", "province": "KZN"},
         {"cluster": "Santam", "businessunit": "Santam Client Solutions", "department": "Client Service Operations", "province": "KZN"},
         {"cluster": "Sanlam Fintech", "businessunit": "Sanlam Rewards", "department": "Sanlam Reality Programme", "province": "MP"},
