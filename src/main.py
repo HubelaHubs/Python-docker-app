@@ -21,6 +21,57 @@ def login():
 def home():
     if not session.get("logged_in"):
         return redirect(url_for("login"))
+
+branches = {
+    "FS": [
+        {"branch": "Parys"},
+        {"branch": "Clarens"},
+        {"branch": "Bloemfontein"},
+    ],
+    "KZN": [
+        {"branch": "Durban"},
+        {"branch": "Pietermaritzburg"},
+        {"branch": "Richards Bay"},
+    ],
+    "Eastern Cape": [
+        {"branch": "East London"},
+        {"branch": "Gqeberha"},
+        {"branch": "Mthatha"},
+    ],
+    "Western Cape": [
+        {"branch": "Cape Town"},
+        {"branch": "George"},
+        {"branch": "Paarl"},
+    ],
+    "Limpopo": [
+        {"branch": "Polokwane"},
+        {"branch": "Tzaneen"},
+    ],
+    "MP": [
+        {"branch": "Mbombela"},
+        {"branch": "Middelburg"},
+    ],
+    "NC": [
+        {"branch": "Kimberley"},
+        {"branch": "Upington"},
+    ],
+    "NW": [
+        {"branch": "Mahikeng"},
+        {"branch": "Rustenburg"},
+    ]
+}
+
+@app.route("/province/<province>")
+def province(province):
+	if not session.get("logged_in"):
+	    return redirect(url_for("login"))
+	province_branches = branches.get(province, [])
+	return render_template(
+		"province.html",
+		province=province,
+		branch=province_branches
+	)
+
     data = [
         {"cluster": "Sanlam Life Savings (SLS)", "businessunit": "Sanlam Retail Mass", "department": "Assupol", "province": "Eastern Cape"},
         {"cluster": "Sanlam Emerging Markets (SEM)", "businessunit": "Sanlam Pan-Africa (SPA)", "department": "Life Insurance", "province": "FS"},

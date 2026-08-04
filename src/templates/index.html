@@ -102,7 +102,12 @@
                 <td>{{ row.cluster }}</td>
                 <td>{{ row.businessunit }}</td>
                 <td>{{ row.department }}</td>
-		<td>{{ row.province }}</td>
+		<td>
+    			<a href="{{ url_for('province', province=row.province) }}">
+        		{{ row.province }}
+    			</a>
+		</td>
+	
             </tr>
             {% endfor %}
         </table>

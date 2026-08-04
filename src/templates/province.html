@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ province }} Branches</title>
+
+    <style>
+        body{
+            font-family: Arial;
+            background:#f4f4f4;
+        }
+
+        table{
+            border-collapse:collapse;
+            width:70%;
+            margin:auto;
+            margin-top:40px;
+        }
+
+        th,td{
+            border:1px solid #ccc;
+            padding:12px;
+            text-align:left;
+        }
+
+        th{
+            background:#0077c8;
+            color:white;
+        }
+
+        h1{
+            text-align:center;
+            color:#0077c8;
+        }
+
+        a{
+            color:#0077c8;
+            text-decoration:none;
+        }
+
+        .back{
+            margin-left:15%;
+        }
+    </style>
+
+</head>
+<body>
+
+<h1>{{ province }} Branches</h1>
+
+<p class="back">
+    <a href="{{ url_for('home') }}">⬅ Back to Provinces</a>
+</p>
+
+<table>
+
+<tr>
+    <th>No</th>
+    <th>Branch Name</th>
+</tr>
+
+{% for branch in branches %}
+
+<tr>
+    <td>{{ loop.index }}</td>
+    <td>{{ branch.branch }}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+</body>
+</html>
