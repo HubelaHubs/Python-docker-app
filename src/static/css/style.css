@@ -1,0 +1,155 @@
+/* ===========================
+   GENERAL
+=========================== */
+
+body{
+    background:#f4f8fb;
+    font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+}
+
+.navbar{
+    background:linear-gradient(90deg,#005AA9,#0096D6);
+}
+
+.navbar-brand{
+    font-weight:600;
+    color:white !important;
+}
+
+.footer{
+    background:#ffffff;
+    border-top:1px solid #ddd;
+    color:#777;
+}
+
+/* ===========================
+   CARDS
+=========================== */
+
+.card{
+    border:none;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.card:hover{
+    transform:translateY(-3px);
+    transition:.3s;
+}
+
+/* ===========================
+   TABLES
+=========================== */
+
+.table{
+    margin-top:15px;
+}
+
+.table thead{
+    background:#005AA9;
+    color:white;
+}
+
+.table thead th{
+    background:#005AA9 !important;
+    color:white;
+    border:none;
+}
+
+.table tbody tr:hover{
+    background:#eef7ff;
+}
+
+.table td{
+    vertical-align:middle;
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.btn-primary{
+    background:#005AA9;
+    border:none;
+}
+
+.btn-primary:hover{
+    background:#0078d4;
+}
+
+.btn-outline-primary:hover{
+    color:white;
+}
+
+/* ===========================
+   SEARCH
+=========================== */
+
+.search-box{
+    width:350px;
+    margin-bottom:20px;
+}
+
+/* ===========================
+   DASHBOARD CARDS
+=========================== */
+
+.stat-card{
+    background:white;
+    border-radius:15px;
+    padding:20px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.stat-card h3{
+    color:#005AA9;
+    font-size:32px;
+    margin:0;
+}
+
+.stat-card p{
+    color:#666;
+    margin:0;
+}
+
+/* ===========================
+   LINKS
+=========================== */
+
+a{
+    text-decoration:none;
+}
+
+a:hover{
+    text-decoration:none;
+}
+
+/* ===========================
+   PAGE HEADER
+=========================== */
+
+.page-title{
+    font-weight:bold;
+    color:#005AA9;
+}
+
+.page-subtitle{
+    color:#666;
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:768px){
+
+.search-box{
+    width:100%;
+}
+
+.table{
+    font-size:14px;
+}
+
+}
