@@ -1,17 +1,33 @@
 {% extends "base.html" %}
 
-{% block title %}
-{{ province }}
-{% endblock %}
-
-{% block page_header %}
-
-<h2>{{ province }} Branches</h2>
-
-{% endblock %}
+{% block title %}{{ province }}{% endblock %}
 
 {% block content %}
 
-<!-- Branch table -->
+<h2>{{ province }} Branches</h2>
+
+<table class="table table-striped">
+
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Branch Name</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+    {% for branch in branches %}
+
+        <tr>
+            <td>{{ loop.index }}</td>
+            <td>{{ branch.branch }}</td>
+        </tr>
+
+    {% endfor %}
+
+    </tbody>
+
+</table>
 
 {% endblock %}
