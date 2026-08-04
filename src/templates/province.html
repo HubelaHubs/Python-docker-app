@@ -1,73 +1,17 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>{{ province }} Branches</title>
+{% extends "base.html" %}
 
-    <style>
-        body{
-            font-family: Arial;
-            background:#f4f4f4;
-        }
+{% block title %}
+{{ province }}
+{% endblock %}
 
-        table{
-            border-collapse:collapse;
-            width:70%;
-            margin:auto;
-            margin-top:40px;
-        }
+{% block page_header %}
 
-        th,td{
-            border:1px solid #ccc;
-            padding:12px;
-            text-align:left;
-        }
+<h2>{{ province }} Branches</h2>
 
-        th{
-            background:#0077c8;
-            color:white;
-        }
+{% endblock %}
 
-        h1{
-            text-align:center;
-            color:#0077c8;
-        }
+{% block content %}
 
-        a{
-            color:#0077c8;
-            text-decoration:none;
-        }
+<!-- Branch table -->
 
-        .back{
-            margin-left:15%;
-        }
-    </style>
-
-</head>
-<body>
-
-<h1>{{ province }} Branches</h1>
-
-<p class="back">
-    <a href="{{ url_for('home') }}">⬅ Back to Provinces</a>
-</p>
-
-<table>
-
-<tr>
-    <th>No</th>
-    <th>Branch Name</th>
-</tr>
-
-{% for branch in branches %}
-
-<tr>
-    <td>{{ loop.index }}</td>
-    <td>{{ branch.branch }}</td>
-</tr>
-
-{% endfor %}
-
-</table>
-
-</body>
-</html>
+{% endblock %}
