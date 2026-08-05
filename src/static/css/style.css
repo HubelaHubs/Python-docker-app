@@ -3,17 +3,56 @@
 =========================== */
 
 body{
-    background:#f4f8fb;
+    background: linear-gradient(
+        -45deg,
+        #dbeafe,
+        #bfdbfe,
+        #93c5fd,
+        #60a5fa
+    );
+
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+
+    min-height:100vh;
+
     font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
 }
 
+@keyframes gradientBG{
+    0%{
+        background-position:0% 50%;
+    }
+    50%{
+        background-position:100% 50%;
+    }
+    100%{
+        background-position:0% 50%;
+    }
+}
+
 .navbar{
-    background:linear-gradient(90deg,#005AA9,#0096D6);
+    background:rgba(0,73,144,.90);
+    backdrop-filter: blur(10px);
 }
 
 .navbar-brand{
     font-weight:600;
     color:white !important;
+}
+
+.glass{
+    background: rgba(255,255,255,.80);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-radius:20px;
+
+    padding:30px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+    border:1px solid rgba(255,255,255,.35);
 }
 
 .footer{
