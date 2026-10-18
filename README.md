@@ -8,6 +8,9 @@ This project is a simple Python application that demonstrates how to use Docker 
 python-docker-app
 ├── src
 │   └── main.py
+|     └── satic
+|      └──templates
+├── compose.yaml
 ├── requirements.txt
 ├── Dockerfile
 └── README.md
