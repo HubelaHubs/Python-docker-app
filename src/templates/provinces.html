@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Provinces | Sanlam Organisation Explorer{% endblock %}
+
+{% block page_header %}
+<div class="glass mb-4">
+    <h1 class="display-5 fw-bold mb-2">Provinces</h1>
+    <p class="text-muted mb-0">Select a province to view its branches.</p>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="row g-4">
+    {% for province in provinces %}
+    <div class="col-sm-6 col-lg-4">
+        <a href="{{ url_for('province', province=province) }}"
+           class="stat-card d-block h-100 text-decoration-none">
+            <h3>{{ province }}</h3>
+            <p>{{ provinces[province]|length }} branches</p>
+        </a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

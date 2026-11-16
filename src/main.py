@@ -91,7 +91,22 @@ def home():
         {"cluster": "Sanlam Group", "businessunit": "Group Strategy", "department": "Corporate Strategy", "province": "Eastern Cape"},
     ]
 
-    return render_template("index.html", data=data)
+    return render_template(
+        "index.html",
+        data=data,
+        province_count=len(branches),
+    )
+
+
+# ---------------------------
+# Provinces Page
+# ---------------------------
+@app.route("/provinces")
+def provinces():
+    if not session.get("logged_in"):
+        return redirect(url_for("login"))
+
+    return render_template("provinces.html", provinces=branches)
 
 
 # ---------------------------

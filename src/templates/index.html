@@ -26,10 +26,11 @@ Sanlam Organisation Explorer
 <div class="row g-4 mb-4">
 
     <div class="col-md-3">
-        <div class="stat-card">
-            <h3>8</h3>
+        <a href="{{ url_for('provinces') }}"
+           class="stat-card d-block h-100 text-decoration-none">
+            <h3>{{ province_count }}</h3>
             <p>Provinces</p>
-        </div>
+        </a>
     </div>
 
     <div class="col-md-3">
