@@ -301,3 +301,14 @@ body{
     font-size: 1.05rem;
     line-height: 1.6;
 }
+
+body.provinces-page{
+    background:
+        linear-gradient(rgba(7, 34, 57, .48), rgba(7, 34, 57, .48)),
+        url("../sanlam-building.jpg") center / cover fixed no-repeat;
+    animation: none;
+}
+
+body.provinces-page .glass{
+    background: rgba(255, 255, 255, .58);
+}
