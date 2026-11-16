@@ -285,14 +285,19 @@ body{
 
 
 /* ===================================================
-   PAGE HEADERS
+   HEADINGS & TEXT
 =================================================== */
 
-.glass h2{
-    font-weight: 700;
+.glass h1,
+.glass h2,
+.glass h3{
     color: var(--primary);
+    font-weight: 700;
+    margin-bottom: 10px;
 }
 
 .text-muted{
-    color: var(--text-muted) !important;
+    color: #475569 !important;
+    font-size: 1.05rem;
+    line-height: 1.6;
 }
