@@ -6,17 +6,15 @@ Sanlam Organisation Explorer
 
 {% block page_header %}
 
-<div class="row mb-4">
+<div class="glass mb-4">
 
-    <div class="col">
+    <h1 class="display-5 fw-bold mb-2">
+        🏢 Sanlam Organisation Explorer
+    </h1>
 
-        <h2 class="page-title">Sanlam Group Structure</h2>
-
-        <p class="page-subtitle">
-            Browse Clusters, Business Units, Departments and Provinces.
-        </p>
-
-    </div>
+    <p class="text-muted mb-0">
+        Explore clusters, business units, departments and provinces across the Sanlam Group.
+    </p>
 
 </div>
 
@@ -24,69 +22,107 @@ Sanlam Organisation Explorer
 
 {% block content %}
 
+<!-- Dashboard Stats -->
+<div class="row g-4 mb-4">
+
+    <div class="col-md-3">
+        <div class="stat-card">
+            <h3>9</h3>
+            <p>Provinces</p>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="stat-card">
+            <h3>{{ data|length }}</h3>
+            <p>Records</p>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="stat-card">
+            <h3>25</h3>
+            <p>Business Units</p>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="stat-card">
+            <h3>Live</h3>
+            <p>Status</p>
+        </div>
+    </div>
+
+</div>
+
 <div class="card">
 
     <div class="card-body">
 
-        <div class="row mb-3">
+        <!-- Search -->
 
-            <div class="col-md-6">
+        <div class="input-group mb-4">
 
-                <input
-                    type="text"
-                    id="search"
-                    class="form-control search-box"
-                    placeholder="Search...">
+            <span class="input-group-text">
+                🔍
+            </span>
 
-            </div>
+            <input
+                type="text"
+                id="search"
+                class="form-control"
+                placeholder="Search Cluster, Business Unit, Department or Province..."
+            >
 
         </div>
 
-        <table class="table table-hover table-striped" id="dataTable">
+        <!-- Table -->
 
-            <thead>
+        <div class="table-responsive">
 
-                <tr>
+            <table class="table table-hover" id="dataTable">
 
-                    <th>Cluster</th>
-                    <th>Business Unit</th>
-                    <th>Department</th>
-                    <th>Province</th>
+                <thead>
+                    <tr>
+                        <th>🏢 Cluster</th>
+                        <th>💼 Business Unit</th>
+                        <th>📂 Department</th>
+                        <th>📍 Province</th>
+                    </tr>
+                </thead>
 
-                </tr>
+                <tbody>
 
-            </thead>
+                {% for row in data %}
 
-            <tbody>
+                    <tr>
 
-            {% for row in data %}
+                        <td>{{ row.cluster }}</td>
 
-                <tr>
+                        <td>{{ row.businessunit }}</td>
 
-                    <td>{{ row.cluster }}</td>
+                        <td>{{ row.department }}</td>
 
-                    <td>{{ row.businessunit }}</td>
+                        <td>
 
-                    <td>{{ row.department }}</td>
+                            <a
+                                href="{{ url_for('province', province=row.province) }}"
+                                class="province-pill"
+                            >
+                                {{ row.province }}
+                            </a>
 
-                    <td>
+                        </td>
 
-                        <a class="btn btn-outline-primary btn-sm"
-                           href="{{ url_for('province', province=row.province) }}">
+                    </tr>
 
-                            {{ row.province }}
+                {% endfor %}
 
-                        </a>
+                </tbody>
 
-                    </td>
+            </table>
 
-                </tr>
-
-            {% endfor %}
-
-            </tbody>
-
-        </table>
+        </div>
 
     </div>
 
